@@ -35,7 +35,7 @@ export default async function Characters({ searchParams }: { searchParams?: Stat
 
             <Pagination totalPages={info.pages} />
 
-            <div className="container">
+            <div className="container mx-auto">
                 <div className="flex-wrap w-full grid grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-4">
                     <Suspense fallback={<div>Loading characters ...</div>}>
                         {results.map((c: Character) => {

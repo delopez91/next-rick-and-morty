@@ -1,0 +1,16 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: docker-next-container_name
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/app
+      - nextjs-rick-and-morty-volume:/app/node_modules
+volumes:
+  nextjs-rick-and-morty-volume:
+    driver: local
+  
+    

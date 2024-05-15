@@ -8,8 +8,8 @@ import { EpisodeName } from "./episodeName";
 export default async function Card({ character }: { character: Character }) {
 
     return (
-        <div className="mx-auto bg-sky-900 relative rounded overflow-hidden flex max-w-[200px] md:min-w-full">
-            <Image className="col-span-1" src={character.image} alt="charactr image" width={200} height={200} loading="lazy" />
+        <div className="mx-auto bg-sky-900 rounded overflow-hidden flex max-w-[200px] min-w-full pb-4 pr-2">
+            <Image className="col-span-1 w-[200px] h-[200px]" src={character.image} alt="character image" width="200" height="200" loading="lazy" />
             <div className="pl-4 text-white">
                 <div className="mt-4  hover:text-orange-500 font-bold text-2xl">{character.name}</div>
 
