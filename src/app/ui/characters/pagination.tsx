@@ -45,7 +45,7 @@ export const Pagination = ({ totalPages }: { totalPages: number }) => {
             {totalPages > 3 ? <PaginationArrow direction="left" href={createPageURL(currentPage - 1)} isDisabled={currentPage - 1 <= 0} /> : null}
 
             {allPages.map((p, i) => {
-                return (Number(p) ? <Link href={createPageURL(p)} key={i} className={clsx('w-10 h-10 p-2 bg-gray-600 rounded-md mx-2', {
+                return (Number(p) ? <Link href={createPageURL(p)} key={i} className={clsx('w-10 h-10 p-2 bg-gray-600 text-white rounded-md mx-2', {
                     'disabled cursor-not-allowed': !Number(p),
                     'bg-sky-700': currentPage == p
                 })} > {p} </Link> : <div className="flex items-end" key={i}>{p}</div>)

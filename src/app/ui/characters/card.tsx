@@ -9,7 +9,7 @@ export default async function Card({ character }: { character: Character }) {
 
     return (
         <div className="mx-auto bg-sky-900 relative rounded overflow-hidden flex max-w-[200px] md:min-w-full">
-            <Image className="col-span-1" src={character.image} alt="charactr image" width={200} height={200} priority />
+            <Image className="col-span-1" src={character.image} alt="charactr image" width={200} height={200} loading="lazy" />
             <div className="pl-4 text-white">
                 <div className="mt-4  hover:text-orange-500 font-bold text-2xl">{character.name}</div>
 
